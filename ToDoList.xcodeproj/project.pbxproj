@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993F6BD12993926600869B85 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F6BD02993926600869B85 /* NewItemViewController.swift */; };
 		99B64A1B2991769700222DA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B64A1A2991769700222DA0 /* AppDelegate.swift */; };
 		99B64A1D2991769700222DA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B64A1C2991769700222DA0 /* SceneDelegate.swift */; };
-		99B64A1F2991769700222DA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B64A1E2991769700222DA0 /* ViewController.swift */; };
+		99B64A1F2991769700222DA0 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B64A1E2991769700222DA0 /* ItemViewController.swift */; };
 		99B64A222991769700222DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B64A202991769700222DA0 /* Main.storyboard */; };
 		99B64A242991769800222DA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99B64A232991769800222DA0 /* Assets.xcassets */; };
 		99B64A272991769800222DA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99B64A252991769800222DA0 /* LaunchScreen.storyboard */; };
+		99B64A302991773300222DA0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 99B64A2F2991773300222DA0 /* Realm */; };
+		99B64A322991773300222DA0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 99B64A312991773300222DA0 /* RealmSwift */; };
+		99B64A342991786F00222DA0 /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B64A332991786F00222DA0 /* ShoppingItem.swift */; };
+		99F93AC229917AB200634AD5 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F93AC029917AB200634AD5 /* ItemTableViewCell.swift */; };
+		99F93AC329917AB200634AD5 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99F93AC129917AB200634AD5 /* ItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		99B64A172991769700222DA0 /* RealmKakeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmKakeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		993F6BD02993926600869B85 /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
+		99B64A172991769700222DA0 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99B64A1A2991769700222DA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99B64A1C2991769700222DA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		99B64A1E2991769700222DA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		99B64A1E2991769700222DA0 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		99B64A212991769700222DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99B64A232991769800222DA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99B64A262991769800222DA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99B64A282991769800222DA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99B64A332991786F00222DA0 /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
+		99F93AC029917AB200634AD5 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		99F93AC129917AB200634AD5 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B64A322991773300222DA0 /* RealmSwift in Frameworks */,
+				99B64A302991773300222DA0 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +52,7 @@
 		99B64A0E2991769700222DA0 = {
 			isa = PBXGroup;
 			children = (
-				99B64A192991769700222DA0 /* RealmKakeibo */,
+				99B64A192991769700222DA0 /* ToDoList */,
 				99B64A182991769700222DA0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +60,35 @@
 		99B64A182991769700222DA0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99B64A172991769700222DA0 /* RealmKakeibo.app */,
+				99B64A172991769700222DA0 /* ToDoList.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		99B64A192991769700222DA0 /* RealmKakeibo */ = {
+		99B64A192991769700222DA0 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
 				99B64A1A2991769700222DA0 /* AppDelegate.swift */,
 				99B64A1C2991769700222DA0 /* SceneDelegate.swift */,
-				99B64A1E2991769700222DA0 /* ViewController.swift */,
+				99B64A1E2991769700222DA0 /* ItemViewController.swift */,
+				993F6BD02993926600869B85 /* NewItemViewController.swift */,
 				99B64A202991769700222DA0 /* Main.storyboard */,
 				99B64A232991769800222DA0 /* Assets.xcassets */,
 				99B64A252991769800222DA0 /* LaunchScreen.storyboard */,
 				99B64A282991769800222DA0 /* Info.plist */,
+				99F93AC129917AB200634AD5 /* ItemTableViewCell.xib */,
+				99F93AC029917AB200634AD5 /* ItemTableViewCell.swift */,
+				99B64A332991786F00222DA0 /* ShoppingItem.swift */,
 			);
-			path = RealmKakeibo;
+			path = ToDoList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		99B64A162991769700222DA0 /* RealmKakeibo */ = {
+		99B64A162991769700222DA0 /* ToDoList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99B64A2B2991769800222DA0 /* Build configuration list for PBXNativeTarget "RealmKakeibo" */;
+			buildConfigurationList = 99B64A2B2991769800222DA0 /* Build configuration list for PBXNativeTarget "ToDoList" */;
 			buildPhases = (
 				99B64A132991769700222DA0 /* Sources */,
 				99B64A142991769700222DA0 /* Frameworks */,
@@ -82,9 +98,13 @@
 			);
 			dependencies = (
 			);
-			name = RealmKakeibo;
+			name = ToDoList;
+			packageProductDependencies = (
+				99B64A2F2991773300222DA0 /* Realm */,
+				99B64A312991773300222DA0 /* RealmSwift */,
+			);
 			productName = RealmKakeibo;
-			productReference = 99B64A172991769700222DA0 /* RealmKakeibo.app */;
+			productReference = 99B64A172991769700222DA0 /* ToDoList.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +122,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 99B64A122991769700222DA0 /* Build configuration list for PBXProject "RealmKakeibo" */;
+			buildConfigurationList = 99B64A122991769700222DA0 /* Build configuration list for PBXProject "ToDoList" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +131,14 @@
 				Base,
 			);
 			mainGroup = 99B64A0E2991769700222DA0;
+			packageReferences = (
+				99B64A2E2991773300222DA0 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 99B64A182991769700222DA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				99B64A162991769700222DA0 /* RealmKakeibo */,
+				99B64A162991769700222DA0 /* ToDoList */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99F93AC329917AB200634AD5 /* ItemTableViewCell.xib in Resources */,
 				99B64A272991769800222DA0 /* LaunchScreen.storyboard in Resources */,
 				99B64A242991769800222DA0 /* Assets.xcassets in Resources */,
 				99B64A222991769700222DA0 /* Main.storyboard in Resources */,
@@ -138,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99B64A1F2991769700222DA0 /* ViewController.swift in Sources */,
+				99B64A342991786F00222DA0 /* ShoppingItem.swift in Sources */,
+				99B64A1F2991769700222DA0 /* ItemViewController.swift in Sources */,
+				993F6BD12993926600869B85 /* NewItemViewController.swift in Sources */,
+				99F93AC229917AB200634AD5 /* ItemTableViewCell.swift in Sources */,
 				99B64A1B2991769700222DA0 /* AppDelegate.swift in Sources */,
 				99B64A1D2991769700222DA0 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RealmKakeibo/Info.plist;
+				INFOPLIST_FILE = ToDoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -299,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyo.RealmKakeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyo.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,7 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RealmKakeibo/Info.plist;
+				INFOPLIST_FILE = ToDoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,7 +353,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyo.RealmKakeibo;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Machida.Zinenzyo.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -337,7 +364,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		99B64A122991769700222DA0 /* Build configuration list for PBXProject "RealmKakeibo" */ = {
+		99B64A122991769700222DA0 /* Build configuration list for PBXProject "ToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99B64A292991769800222DA0 /* Debug */,
@@ -346,7 +373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99B64A2B2991769800222DA0 /* Build configuration list for PBXNativeTarget "RealmKakeibo" */ = {
+		99B64A2B2991769800222DA0 /* Build configuration list for PBXNativeTarget "ToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99B64A2C2991769800222DA0 /* Debug */,
@@ -356,6 +383,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		99B64A2E2991773300222DA0 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		99B64A2F2991773300222DA0 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99B64A2E2991773300222DA0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		99B64A312991773300222DA0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 99B64A2E2991773300222DA0 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 99B64A0F2991769700222DA0 /* Project object */;
 }
