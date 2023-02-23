@@ -14,7 +14,6 @@ class ItemViewController: UIViewController, UITableViewDataSource {
     
     let realm = try! Realm()
     var items: [ShoppingItem] = []
-    var selectedCategory: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +21,11 @@ class ItemViewController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
         items = readItems()
-        //navigationItem.title = selectedCategory.title
     }
     
+    //TableViewのリロードを行っている
     override func viewWillAppear(_ animated: Bool) {
-        items = readItems()
+        //items = readItems()
         tableView.reloadData()
     }
     
@@ -43,15 +42,15 @@ class ItemViewController: UIViewController, UITableViewDataSource {
     }
     
     func readItems() -> [ShoppingItem] {
-        return Array(realm.objects(ShoppingItem.self).filter("category == %@", selectedCategory!))
+        return Array(realm.objects(ShoppingItem.self))
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toNewItemView" {
-            let newItemViewController = segue.destination as! NewItemViewController
-            newItemViewController.category = self.selectedCategory
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toNewItemView" {
+//            let newItemViewController = segue.destination as! NewItemViewController
+//            newItemViewController.category = self.selectedCategory
+//        }
+//    }
     
 }
 

@@ -15,22 +15,18 @@ class NewItemViewController: UIViewController {
     @IBOutlet var markSwitch: UISwitch!
 
     let realm = try! Realm()
-    var category: Category!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    //Realmへの保存をしている
     @IBAction func save( ) {
         let item = ShoppingItem()
         item.title = titleTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "") ?? 0
         item.isMarked = markSwitch.isOn
-        //item.category = category
         createItem(item: item)
-        
-        let previousNC = self.presentingViewController as! UINavigationController
-        let previousVC = previousNC.viewControllers[previousNC.viewControllers.count - 1] as! ItemViewController
         
         self.dismiss(animated: true)
     }
@@ -40,15 +36,5 @@ class NewItemViewController: UIViewController {
             realm.add(item)
         }
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
