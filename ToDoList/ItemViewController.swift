@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 class ItemViewController: UIViewController, UITableViewDataSource {
-
+    
     @IBOutlet var tableView: UITableView!
     
     let realm = try! Realm()
@@ -32,7 +32,7 @@ class ItemViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableViewCell
         let item: ShoppingItem = items[indexPath.row]
@@ -45,12 +45,17 @@ class ItemViewController: UIViewController, UITableViewDataSource {
         return Array(realm.objects(ShoppingItem.self))
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toNewItemView" {
-//            let newItemViewController = segue.destination as! NewItemViewController
-//            newItemViewController.category = self.selectedCategory
-//        }
-//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            try! realm.write {
+                realm.delete(items[indexPath.row])
+            }
+            
+            tableView.reloadData()
+        }
+    }
     
 }
 
