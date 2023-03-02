@@ -24,6 +24,7 @@ class NewItemViewController: UIViewController {
     @IBAction func save( ) {
         let item = ShoppingItem()
         item.title = titleTextField.text ?? ""
+        //item.price = priceTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "") ?? 0
         item.isMarked = markSwitch.isOn
         createItem(item: item)
