@@ -10,14 +10,17 @@ import RealmSwift
 
 class NewItemViewController: UIViewController {
     
+    @IBOutlet weak var Picker: UIDatePicker!
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var priceTextField: UITextField!
     @IBOutlet var markSwitch: UISwitch!
 
     let realm = try! Realm()
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     //Realmへの保存をしている
@@ -27,8 +30,11 @@ class NewItemViewController: UIViewController {
         //item.price = priceTextField.text ?? ""
         item.price = Int(priceTextField.text ?? "") ?? 0
         item.isMarked = markSwitch.isOn
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
+        item.date = dateFormatter.string(from: Picker.date)
         createItem(item: item)
         
+        print(Picker.date)
         self.dismiss(animated: true)
     }
     

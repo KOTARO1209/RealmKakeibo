@@ -95,11 +95,16 @@
                                 <rect key="frame" x="320" y="343" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="g80-j5-nqa">
+                                <rect key="frame" x="0.0" y="540" width="414" height="135"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AnM-S5-HGn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="Picker" destination="g80-j5-nqa" id="j7X-EG-fU3"/>
                         <outlet property="markSwitch" destination="ksr-jQ-gSS" id="N8o-Ou-mpa"/>
                         <outlet property="priceTextField" destination="7BM-bB-GCu" id="dRA-mj-seP"/>
                         <outlet property="titleTextField" destination="l7r-o4-3dA" id="Wsl-HD-m4Y"/>
@@ -107,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BS2-Me-7uA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2142" y="38"/>
+            <point key="canvasLocation" x="2140.5797101449275" y="37.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EuL-6N-4iG">

@@ -14,6 +14,8 @@ class ItemViewController: UIViewController, UITableViewDataSource {
     
     let realm = try! Realm()
     var items: [ShoppingItem] = []
+    let dt = Date()
+    let dateformatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,8 @@ class ItemViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableViewCell
         let item: ShoppingItem = items[indexPath.row]
-        cell.setCell(title: item.title, price: item.price, isMarked: item.isMarked)
+        self.dateformatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
+        cell.setCell(title: item.title, price: item.price, isMarked: item.isMarked, date: item.date ?? self.dateformatter.string(from: dt))
         
         return cell
     }
