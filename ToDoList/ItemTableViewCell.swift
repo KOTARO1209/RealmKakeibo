@@ -25,9 +25,9 @@ class ItemTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setCell(title: String, price: Int, isMarked: Bool, date: String) {
+    func setCell(title: String, contents: String, isMarked: Bool, date: String) {
         titleLabel.text = title
-        priceLabel.text = String(price) //+ "円"
+        priceLabel.text = String(contents) //+ "円"
         dateLabel.text = String(date)
         if isMarked {
             markImageView.image = UIImage(systemName: "star.fill")

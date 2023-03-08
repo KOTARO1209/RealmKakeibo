@@ -28,7 +28,7 @@ class NewItemViewController: UIViewController {
         let item = ShoppingItem()
         item.title = titleTextField.text ?? ""
         //item.price = priceTextField.text ?? ""
-        item.price = Int(priceTextField.text ?? "") ?? 0
+        item.contents = priceTextField.text ?? ""
         item.isMarked = markSwitch.isOn
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
         item.date = dateFormatter.string(from: Picker.date)

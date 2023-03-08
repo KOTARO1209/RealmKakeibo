@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class ItemViewController: UIViewController, UITableViewDataSource {
+class ItemViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
     
@@ -20,6 +20,7 @@ class ItemViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ItemTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
         items = readItems()
@@ -31,6 +32,10 @@ class ItemViewController: UIViewController, UITableViewDataSource {
         tableView.reloadData()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -39,7 +44,7 @@ class ItemViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableViewCell
         let item: ShoppingItem = items[indexPath.row]
         self.dateformatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yMMMdHms", options: 0, locale: Locale(identifier: "ja_JP"))
-        cell.setCell(title: item.title, price: item.price, isMarked: item.isMarked, date: item.date ?? self.dateformatter.string(from: dt))
+        cell.setCell(title: item.title, contents: item.contents, isMarked: item.isMarked, date: item.date ?? self.dateformatter.string(from: dt))
         
         return cell
     }
