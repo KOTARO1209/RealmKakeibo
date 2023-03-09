@@ -28,7 +28,9 @@ class ItemViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //TableViewのリロードを行っている
     override func viewWillAppear(_ animated: Bool) {
-        //items = readItems()
+        //これを追加すると表示されるたびに更新される
+        items = readItems()
+        
         tableView.reloadData()
     }
     
